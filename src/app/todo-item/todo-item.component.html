@@ -1,0 +1,6 @@
+<label for="isDone{{toDoItem.id}}" 
+[ngClass]="{
+    'toDoChecked': toDoItem.isDone,
+    'toDoUnchecked': !toDoItem.isDone
+}">{{toDoItem.title}}
+<input id="isDone{{toDoItem.id}}" type="checkbox" [(ngModel)]="toDoItem.isDone" (change)="checkValue()">

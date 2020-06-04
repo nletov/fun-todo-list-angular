@@ -1,0 +1,11 @@
+<app-todo-list-add-form
+    (itemToAdd)="addNewTodo($event)">
+</app-todo-list-add-form>
+<ul>
+    <li *ngFor="let todo of todosList">
+        <app-todo-item
+            [toDoItem] = "todo" 
+            (toDoItemChecked)="toDoItemChecked($event)">
+        </app-todo-item>       
+    </li>
+</ul>
